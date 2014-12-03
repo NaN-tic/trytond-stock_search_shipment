@@ -6,15 +6,15 @@ from trytond.pool import Pool, PoolMeta
 from trytond.wizard import Button, StateAction, StateView, Wizard
 from trytond.pyson import PYSONEncoder
 from trytond.transaction import Transaction
-__all__ = ['StockSearchShipmentStart', 'StockSearchShipment']
 
+__all__ = ['StockSearchShipmentStart', 'StockSearchShipment']
 __metaclass__ = PoolMeta
 
 
 class StockSearchShipmentStart(ModelView):
     'Stock Search Shipment Start'
     __name__ = 'stock.search.shipment.start'
-    name = fields.Char('Code',
+    name = fields.Char('Code', required=True,
         help='The code of the stock shipment you are looking for.')
 
 

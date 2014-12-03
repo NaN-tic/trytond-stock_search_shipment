@@ -4,7 +4,6 @@
 from trytond.pool import Pool
 from .shipment import *
 
-
 def register():
     Pool.register(
         StockSearchShipmentStart,
