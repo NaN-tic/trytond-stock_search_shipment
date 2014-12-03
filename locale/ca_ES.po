@@ -1,0 +1,35 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:stock.search.shipment.start,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:stock.search.shipment.start,name:"
+msgid "Code"
+msgstr "Codi"
+
+msgctxt "help:stock.search.shipment.start,name:"
+msgid "The code of the stock shipment you are looking for."
+msgstr "El codi de l'albarà que voleu cercar."
+
+msgctxt "model:ir.action,name:stock_search_shipment_wizard"
+msgid "Stock Search Shipment"
+msgstr "Cerca albarà"
+
+msgctxt "model:stock.search.shipment.start,name:"
+msgid "Stock Search Shipment Start"
+msgstr "Inici de recerca d'albarà"
+
+msgctxt "view:stock.search.shipment.start:"
+msgid "Stock Search Shipment"
+msgstr "Cerca albarà"
+
+msgctxt "wizard_button:stock.search.shipment,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgctxt "wizard_button:stock.search.shipment,start,open_:"
+msgid "Search"
+msgstr "Cerca"

@@ -1,0 +1,39 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:stock.search.shipment.start,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:stock.search.shipment.start,name:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "help:stock.search.shipment.start,name:"
+msgid "The code of the stock shipment you are looking for."
+msgstr "El código del albarán que está buscando."
+
+msgctxt "model:ir.action,name:"
+msgid "Customer Shipments"
+msgstr "Albaranes de cliente"
+
+msgctxt "model:ir.action,name:stock_search_shipment_wizard"
+msgid "Stock Search Shipment"
+msgstr "Buscar albarán"
+
+msgctxt "model:stock.search.shipment.start,name:"
+msgid "Stock Search Shipment Start"
+msgstr "Inicio búsqueda albarán"
+
+msgctxt "view:stock.search.shipment.start:"
+msgid "Stock Search Shipment"
+msgstr "Buscar albarán"
+
+msgctxt "wizard_button:stock.search.shipment,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:stock.search.shipment,start,open_:"
+msgid "Search"
+msgstr "Buscar"
