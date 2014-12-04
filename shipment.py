@@ -3,17 +3,27 @@
 # copyright notices and license terms.
 from trytond.model import fields, ModelView
 from trytond.pool import Pool, PoolMeta
-from trytond.wizard import Button, StateAction, StateView, Wizard
+from trytond.wizard import Button, StateAction, StateTransition, StateView, \
+    Wizard
 from trytond.pyson import PYSONEncoder
 from trytond.transaction import Transaction
 
-__all__ = ['StockSearchShipmentStart', 'StockSearchShipment']
+__all__ = ['StockSearchShipmentStart', 'StockSearchShipmentStartFields',
+    'StockSearchShipment']
 __metaclass__ = PoolMeta
 
 
 class StockSearchShipmentStart(ModelView):
     'Stock Search Shipment Start'
     __name__ = 'stock.search.shipment.start'
+    shipments = fields.One2Many('stock.search.shipment.start.field', 'search',
+        'Shipments')
+
+
+class StockSearchShipmentStartFields(ModelView):
+    'Stock Search Shipment Start'
+    __name__ = 'stock.search.shipment.start.field'
+    search = fields.Many2One('stock.search.shipment.start', 'Search')
     name = fields.Char('Code', required=True,
         help='The code of the stock shipment you are looking for.')
 
@@ -40,13 +50,13 @@ class StockSearchShipment(Wizard):
                 ('res_model', '=', context['active_model']),
                 ('domain', '=', None),
                 ], limit=1)
-        shipments = Shipment.search([
-                ('code', '=', self.start.name),
-                ], limit=1)
+        codes = [s.name for s in self.start.shipments]
+        shipments = [s.id for s in Shipment.search([
+                    ('code', 'in', codes),
+                    ])]
         if shipments:
-            shipment, = shipments
             action['pyson_domain'] = PYSONEncoder().encode([
-                    ('id', '=', shipment.id),
+                    ('id', 'in', shipments),
                     ])
             if context['active_model'] != 'stock.shipment.out':
                 action['res_model'] = context['active_model']
@@ -62,4 +72,5 @@ class StockSearchShipment(Wizard):
                             ])]
             del action['act_window_domains']
             action['domains'] = []
+            self.start.shipments = None
         return action, {}

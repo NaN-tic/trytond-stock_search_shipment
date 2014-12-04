@@ -3,6 +3,6 @@
 The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license terms. -->
 <form string="Stock Search Shipment">
-    <label name="name"/>
-    <field name="name"/>
+    <field name="shipments"
+        view_ids="stock_search_shipment.stock_search_shipment_start_field_form_view"/>
 </form>

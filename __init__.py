@@ -4,9 +4,11 @@
 from trytond.pool import Pool
 from .shipment import *
 
+
 def register():
     Pool.register(
         StockSearchShipmentStart,
+        StockSearchShipmentStartFields,
         module='stock_search_shipment', type_='model')
     Pool.register(
         StockSearchShipment,
