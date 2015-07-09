@@ -3,14 +3,71 @@
 # copyright notices and license terms.
 from trytond.model import fields, ModelView
 from trytond.pool import Pool, PoolMeta
-from trytond.wizard import Button, StateAction, StateTransition, StateView, \
-    Wizard
+from trytond.wizard import Button, StateAction, StateView, Wizard
 from trytond.pyson import PYSONEncoder
 from trytond.transaction import Transaction
 
-__all__ = ['StockSearchShipmentStart', 'StockSearchShipmentStartFields',
+__all__ = ['ShipmentIn', 'ShipmentInReturn',
+    'ShipmentOut', 'ShipmentOutReturn', 'ShipmentInternal',
+    'StockSearchShipmentStart', 'StockSearchShipmentStartFields',
     'StockSearchShipment']
+
 __metaclass__ = PoolMeta
+
+
+class ShipmentIn():
+    __name__ = 'stock.shipment.in'
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return ['OR',
+            ('code',) + tuple(clause[1:]),
+            ('reference',) + tuple(clause[1:]),
+            ]
+
+
+class ShipmentInReturn():
+    __name__ = 'stock.shipment.in.return'
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return ['OR',
+            ('code',) + tuple(clause[1:]),
+            ('reference',) + tuple(clause[1:]),
+            ]
+
+
+class ShipmentOut():
+    __name__ = 'stock.shipment.out'
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return ['OR',
+            ('code',) + tuple(clause[1:]),
+            ('reference',) + tuple(clause[1:]),
+            ]
+
+
+class ShipmentOutReturn():
+    __name__ = 'stock.shipment.out.return'
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return ['OR',
+            ('code',) + tuple(clause[1:]),
+            ('reference',) + tuple(clause[1:]),
+            ]
+
+
+class ShipmentInternal():
+    __name__ = 'stock.shipment.internal'
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return ['OR',
+            ('code',) + tuple(clause[1:]),
+            ('reference',) + tuple(clause[1:]),
+            ]
 
 
 class StockSearchShipmentStart(ModelView):

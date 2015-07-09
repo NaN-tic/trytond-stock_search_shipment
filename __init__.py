@@ -7,6 +7,11 @@ from .shipment import *
 
 def register():
     Pool.register(
+        ShipmentIn,
+        ShipmentInReturn,
+        ShipmentOut,
+        ShipmentOutReturn,
+        ShipmentInternal,
         StockSearchShipmentStart,
         StockSearchShipmentStartFields,
         module='stock_search_shipment', type_='model')
