@@ -10,7 +10,27 @@ msgctxt "field:stock.search.shipment.start,name:"
 msgid "Code"
 msgstr "Codi"
 
+msgctxt "field:stock.search.shipment.start,shipments:"
+msgid "Shipments"
+msgstr "Albarans"
+
+msgctxt "field:stock.search.shipment.start.field,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:stock.search.shipment.start.field,name:"
+msgid "Code"
+msgstr "Codi"
+
+msgctxt "field:stock.search.shipment.start.field,search:"
+msgid "Search"
+msgstr "Cerca"
+
 msgctxt "help:stock.search.shipment.start,name:"
+msgid "The code of the stock shipment you are looking for."
+msgstr "El codi de l'albarà que voleu cercar."
+
+msgctxt "help:stock.search.shipment.start.field,name:"
 msgid "The code of the stock shipment you are looking for."
 msgstr "El codi de l'albarà que voleu cercar."
 
@@ -21,6 +41,14 @@ msgstr "Cerca albarà"
 msgctxt "model:stock.search.shipment.start,name:"
 msgid "Stock Search Shipment Start"
 msgstr "Inici de recerca d'albarà"
+
+msgctxt "model:stock.search.shipment.start.field,name:"
+msgid "Stock Search Shipment Start"
+msgstr "Inici de recerca d'albarà"
+
+msgctxt "view:stock.search.shipment.start.field:"
+msgid "Stock Search Shipment"
+msgstr "Cerca albarà"
 
 msgctxt "view:stock.search.shipment.start:"
 msgid "Stock Search Shipment"

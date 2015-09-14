@@ -10,7 +10,27 @@ msgctxt "field:stock.search.shipment.start,name:"
 msgid "Code"
 msgstr "Código"
 
+msgctxt "field:stock.search.shipment.start,shipments:"
+msgid "Shipments"
+msgstr "Envíos"
+
+msgctxt "field:stock.search.shipment.start.field,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:stock.search.shipment.start.field,name:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:stock.search.shipment.start.field,search:"
+msgid "Search"
+msgstr "Búsqueda"
+
 msgctxt "help:stock.search.shipment.start,name:"
+msgid "The code of the stock shipment you are looking for."
+msgstr "El código del albarán que está buscando."
+
+msgctxt "help:stock.search.shipment.start.field,name:"
 msgid "The code of the stock shipment you are looking for."
 msgstr "El código del albarán que está buscando."
 
@@ -25,6 +45,14 @@ msgstr "Buscar albarán"
 msgctxt "model:stock.search.shipment.start,name:"
 msgid "Stock Search Shipment Start"
 msgstr "Inicio búsqueda albarán"
+
+msgctxt "model:stock.search.shipment.start.field,name:"
+msgid "Stock Search Shipment Start"
+msgstr "Inicio búsqueda albarán"
+
+msgctxt "view:stock.search.shipment.start.field:"
+msgid "Stock Search Shipment"
+msgstr "Buscar albarán"
 
 msgctxt "view:stock.search.shipment.start:"
 msgid "Stock Search Shipment"
