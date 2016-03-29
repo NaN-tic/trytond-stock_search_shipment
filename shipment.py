@@ -12,10 +12,9 @@ __all__ = ['ShipmentIn', 'ShipmentInReturn',
     'StockSearchShipmentStart', 'StockSearchShipmentStartFields',
     'StockSearchShipment']
 
-__metaclass__ = PoolMeta
 
-
-class ShipmentIn():
+class ShipmentIn:
+    __metaclass__ = PoolMeta
     __name__ = 'stock.shipment.in'
 
     @classmethod
@@ -26,7 +25,8 @@ class ShipmentIn():
             ]
 
 
-class ShipmentInReturn():
+class ShipmentInReturn:
+    __metaclass__ = PoolMeta
     __name__ = 'stock.shipment.in.return'
 
     @classmethod
@@ -37,7 +37,8 @@ class ShipmentInReturn():
             ]
 
 
-class ShipmentOut():
+class ShipmentOut:
+    __metaclass__ = PoolMeta
     __name__ = 'stock.shipment.out'
 
     @classmethod
@@ -48,7 +49,8 @@ class ShipmentOut():
             ]
 
 
-class ShipmentOutReturn():
+class ShipmentOutReturn:
+    __metaclass__ = PoolMeta
     __name__ = 'stock.shipment.out.return'
 
     @classmethod
@@ -59,7 +61,8 @@ class ShipmentOutReturn():
             ]
 
 
-class ShipmentInternal():
+class ShipmentInternal:
+    __metaclass__ = PoolMeta
     __name__ = 'stock.shipment.internal'
 
     @classmethod
