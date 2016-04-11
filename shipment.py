@@ -31,7 +31,13 @@ class ShipmentInReturn():
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        return ['OR',
+        domain = super(ShipmentInReturn, cls).search_rec_name(name, clause)
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        return [bool_op,
+            domain,
             ('code',) + tuple(clause[1:]),
             ('reference',) + tuple(clause[1:]),
             ]
@@ -42,7 +48,13 @@ class ShipmentOut():
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        return ['OR',
+        domain = super(ShipmentOut, cls).search_rec_name(name, clause)
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        return [bool_op,
+            domain,
             ('code',) + tuple(clause[1:]),
             ('reference',) + tuple(clause[1:]),
             ]
@@ -53,7 +65,13 @@ class ShipmentOutReturn():
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        return ['OR',
+        domain = super(ShipmentOutReturn, cls).search_rec_name(name, clause)
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        return [bool_op,
+            domain,
             ('code',) + tuple(clause[1:]),
             ('reference',) + tuple(clause[1:]),
             ]
@@ -64,7 +82,13 @@ class ShipmentInternal():
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        return ['OR',
+        domain = super(ShipmentInternal, cls).search_rec_name(name, clause)
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        return [bool_op,
+            domain,
             ('code',) + tuple(clause[1:]),
             ('reference',) + tuple(clause[1:]),
             ]
